@@ -1,0 +1,224 @@
+<TaskerData sr="" dvi="1" tv="5.9.2">
+	<dmetric>720.0,1184.0</dmetric>
+	<Project sr="proj0" ve="2">
+		<cdate>1589809197467</cdate>
+		<name>Tasker.JS</name>
+		<scenes>Tasker.JS Dialog</scenes>
+		<tids>6</tids>
+		<Kid sr="Kid">
+			<launchID>6</launchID>
+			<pkg>n.paul.javascript.console.mini</pkg>
+			<vTarg>21</vTarg>
+			<vnme>1.0.0 [by N Paul]</vnme>
+		</Kid>
+		<Img sr="icon" ve="2">
+			<uri>content://com.android.externalstorage.documents/document/primary%3ADownload%2FTasker%20dot%20js%2FTasker%20dot%20js%2FLogo%2FLogo%20low.png</uri>
+		</Img>
+	</Project>
+	<Scene sr="sceneTasker.JS Dialog">
+		<cdate>1589811483017</cdate>
+		<edate>1594742373995</edate>
+		<gridSize>10</gridSize>
+		<heightLand>-1</heightLand>
+		<heightPort>584</heightPort>
+		<nme>Tasker.JS Dialog</nme>
+		<widthLand>-1</widthLand>
+		<widthPort>720</widthPort>
+		<WebElement sr="elements0" ve="2">
+			<flags>4</flags>
+			<geom>0,0,720,584,10,329,685,729</geom>
+			<Str sr="arg0" ve="3">WebView1</Str>
+			<Int sr="arg1" val="2"/>
+			<Str sr="arg2" ve="3">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+  &lt;title&gt;JavaScript Console by N Paul&lt;/title&gt;
+  
+  &lt;!-- HTML --&gt;
+  
+&lt;!-- This project is originally made by me(N Paul).
+My github profile https://github.com/nirmalpaul383/
+My youtube page https://www.youtube.com/channel/UCY6JY8bTlR7hZEvhy6Pldxg/
+This is an open source program . You are welcomed to modify it...
+If you want to support me please give a like to our facebook page
+https://facebook.com/a.new.way.Technical/ --&gt;
+
+  &lt;!-- Custom Styles --&gt;
+  &lt;style&gt;* {
+    padding: 0px;
+    margin: 0px;
+  
+  }
+  
+  #dis {
+    width: 98vw;
+    display: inline-block;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    background: rgb(0, 0, 0);
+    height: 88vh;
+    color: rgb(51, 204, 51);
+  }
+  
+  #code {
+    display: inline;
+    width: 80vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    height: 10vh;
+    border:1px solid red;
+    border-radius:10px;
+    color:red;
+  }
+  
+  #ok {
+    display: inline;
+    width: 16vw;
+    height: 10vh;
+    background: rgb(51, 204, 204);
+    position:absolute;
+    border:1px solid blue;
+    border-radius:10px;
+    font-size:2vh;
+   
+  }
+  
+  #ok:hover {
+    background: rgb(51, 204, 89);
+  }
+  
+  #ok:active {
+    background: rgb(204, 51, 51);
+  }
+  #user_input {
+    display:inline-block;
+    height:10vh;
+  }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+ &lt;textarea  type="text" id="dis"&gt;&lt;/textarea&gt;
+ &lt;div id="user_input"&gt;
+ 
+ &lt;input type="text" id="code" placeholder="type the code"&gt;
+ &lt;input type="button" id="ok" value="OK" onclick="ok()"&gt;
+ 
+ &lt;/div&gt;
+ 
+  &lt;!-- Project --&gt;
+  &lt;script &gt;
+  /** This project is originally made by me(N Paul).
+   My github profile https://github.com/nirmalpaul383/
+   My youtube page https://www.youtube.com/channel/UCY6JY8bTlR7hZEvhy6Pldxg/
+   This is an open source program . You are welcomed to modify it...
+   If you want to support me please give a like to our facebook page 
+   https://facebook.com/a.new.way.Technical/  **/
+  
+  const taskerjs = {about: `A console written using the source codes of (https://github.com/nirmalpaul383/JavaScript_Console_Mini-inside-webpage) with support of the Tasker's JavaScript interface....
+
+This project is originally made by me(N Paul). My github profile https://github.com/nirmalpaul383/ My youtube page https://www.youtube.com/channel/UCY6JY8bTlR7hZEvhy6Pldxg/
+
+This is an open source program . You are welcomed to modify it... If you want to support me please give a like to our facebook page https://facebook.com/a.new.way.Technical/`
+};
+  var code = document.getElementById('code');
+  var dis = document.getElementById('dis');
+  var codeObj = [];
+  var process;
+  dis.value = `Welcome to Tasker.JS Mini by N Paul... Current Version 1.0.0.
+Type "taskerjs.about" for more info...
+  
+`;
+  
+  
+  function ok() {
+    dis.value = `${dis.value} User: ${code.value}
+`;
+  
+  
+    var loopThrough = 0;
+    codeObj.push(code.value);
+   /** console.log(obj.lenght);**/
+  
+    while (loopThrough &lt; codeObj.length) {
+      if (loopThrough != (codeObj.length - 1))
+      {
+        try {
+          eval(codeObj[loopThrough]);
+          throw "Error";
+        }
+        catch(err) {
+          
+        }
+     }
+      else
+      {
+        try {
+          process = eval(codeObj[loopThrough]);
+        }
+        catch (err) {
+          process = err.message;
+        }
+      };
+      loopThrough++;
+    };
+    dis.value = `${dis.value} JavaScript Engine: ${process}
+  
+`;
+    code.value = "";
+  }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</Str>
+			<Int sr="arg3" val="1"/>
+			<Int sr="arg4" val="1"/>
+			<Int sr="arg5" val="1"/>
+			<Int sr="arg6" val="1"/>
+			<Int sr="arg7" val="1"/>
+			<RectElement sr="background">
+				<flags>4</flags>
+				<geom>-1,-1,-1,-1,-1,-1,-1,-1</geom>
+				<Str sr="arg0" ve="3"/>
+				<Int sr="arg1" val="0"/>
+				<Str sr="arg2" ve="3"/>
+				<Str sr="arg3" ve="3"/>
+				<Int sr="arg4" val="0"/>
+				<Str sr="arg5" ve="3">#FF000000</Str>
+				<Int sr="arg6" val="0"/>
+				<Int sr="arg7" val="0"/>
+			</RectElement>
+		</WebElement>
+		<PropertiesElement sr="props">
+			<Int sr="arg0" val="1"/>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg2" ve="3">#FFFFFFFF</Str>
+			<Int sr="arg3" val="1"/>
+			<Str sr="arg4" ve="3">Tasker.JS Console</Str>
+			<Str sr="arg5" ve="3">v1.0.0 by N Paul</Str>
+			<Img sr="arg6" ve="2"/>
+			<Str sr="arg7" ve="3"/>
+		</PropertiesElement>
+	</Scene>
+	<Task sr="task6">
+		<cdate>1594625856195</cdate>
+		<edate>1594742463791</edate>
+		<id>6</id>
+		<nme>Dialog</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>47</code>
+			<Str sr="arg0" ve="3">Tasker.JS Dialog</Str>
+			<Int sr="arg1" val="3"/>
+			<Int sr="arg2" val="100"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="10"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="1"/>
+		</Action>
+	</Task>
+</TaskerData>

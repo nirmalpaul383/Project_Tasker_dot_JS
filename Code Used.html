@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>JavaScript Console by N Paul</title>
+  
+  <!-- HTML -->
+  
+<!-- This project is originally made by me(N Paul).
+My github profile https://github.com/nirmalpaul383/
+My youtube page https://www.youtube.com/channel/UCY6JY8bTlR7hZEvhy6Pldxg/
+This is an open source program . You are welcomed to modify it...
+If you want to support me please give a like to our facebook page
+https://facebook.com/a.new.way.Technical/ -->
+
+  <!-- Custom Styles -->
+  <style>* {
+    padding: 0px;
+    margin: 0px;
+  
+  }
+  
+  #dis {
+    width: 98vw;
+    display: inline-block;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    background: rgb(0, 0, 0);
+    height: 88vh;
+    color: rgb(51, 204, 51);
+  }
+  
+  #code {
+    display: inline;
+    width: 80vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    height: 10vh;
+    border:1px solid red;
+    border-radius:10px;
+    color:red;
+  }
+  
+  #ok {
+    display: inline;
+    width: 16vw;
+    height: 10vh;
+    background: rgb(51, 204, 204);
+    position:absolute;
+    border:1px solid blue;
+    border-radius:10px;
+    font-size:2vh;
+   
+  }
+  
+  #ok:hover {
+    background: rgb(51, 204, 89);
+  }
+  
+  #ok:active {
+    background: rgb(204, 51, 51);
+  }
+  #user_input {
+    display:inline-block;
+    height:10vh;
+  }
+  </style>
+</head>
+
+<body>
+ <textarea  type="text" id="dis"></textarea>
+ <div id="user_input">
+ 
+ <input type="text" id="code" placeholder="type the code">
+ <input type="button" id="ok" value="OK" onclick="ok()">
+ 
+ </div>
+ 
+  <!-- Project -->
+  <script >
+  /** This project is originally made by me(N Paul).
+   My github profile https://github.com/nirmalpaul383/
+   My youtube page https://www.youtube.com/channel/UCY6JY8bTlR7hZEvhy6Pldxg/
+   This is an open source program . You are welcomed to modify it...
+   If you want to support me please give a like to our facebook page 
+   https://facebook.com/a.new.way.Technical/  **/
+  
+  const taskerjs = {about: `A console written using the source codes of (https://github.com/nirmalpaul383/JavaScript_Console_Mini-inside-webpage) with support of the Tasker's JavaScript interface....
+
+This project is originally made by me(N Paul). My github profile https://github.com/nirmalpaul383/ My youtube page https://www.youtube.com/channel/UCY6JY8bTlR7hZEvhy6Pldxg/
+
+This is an open source program . You are welcomed to modify it... If you want to support me please give a like to our facebook page https://facebook.com/a.new.way.Technical/`
+};
+  var code = document.getElementById('code');
+  var dis = document.getElementById('dis');
+  var codeObj = [];
+  var process;
+  dis.value = `Welcome to Tasker.JS Mini by N Paul... Current Version 1.0.0.
+Type "taskerjs.about" for more info...
+  
+`;
+  
+  
+  function ok() {
+    dis.value = `${dis.value} User: ${code.value}
+`;
+  
+  
+    var loopThrough = 0;
+    codeObj.push(code.value);
+   /** console.log(obj.lenght);**/
+  
+    while (loopThrough < codeObj.length) {
+      if (loopThrough != (codeObj.length - 1))
+      {
+        try {
+          eval(codeObj[loopThrough]);
+          throw "Error";
+        }
+        catch(err) {
+          
+        }
+     }
+      else
+      {
+        try {
+          process = eval(codeObj[loopThrough]);
+        }
+        catch (err) {
+          process = err.message;
+        }
+      };
+      loopThrough++;
+    };
+    dis.value = `${dis.value} JavaScript Engine: ${process}
+  
+`;
+    code.value = "";
+  }
+  </script>
+</body>
+</html>
