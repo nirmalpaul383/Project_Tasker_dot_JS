@@ -5,7 +5,8 @@ A JavaScript console with support of the Tasker's JavaScript interface....
 Disclaimer: I have used the "Tasker" word just as naming purpose (and because it is actually Tasker's project). This project is not officially affiliated with or endorsed by Tasker in any way.
 ..............................................................................................................................................................................
 
-About: A console written using the source codes of (https://github.com/nirmalpaul383/JavaScript_Console_Mini-inside-webpage) with support of the Tasker's JavaScript interface....
+About: A console written using the source codes of (https://github.com/nirmalpaul383/JavaScript_Console_Mini-inside-webpage) with support of the Tasker's JavaScript interface.
+You can find more information about Tasker's JavaScript interface at https://tasker.joaoapps.com/userguide/en/javascript.html 
 
 This project is originally made by me(N Paul). My github profile https://github.com/nirmalpaul383/ My youtube page https://www.youtube.com/channel/UCY6JY8bTlR7hZEvhy6Pldxg/
 
