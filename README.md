@@ -1,5 +1,6 @@
 # Project_Tasker_dot_JS
 A JavaScript console with support of the Tasker's JavaScript interface....  
+How to use 'Tasker.JS'? Here is a quick video about it: https://youtu.be/J8Lz8cF5Oe0
 
 ..............................................................................................................................................................................
 
