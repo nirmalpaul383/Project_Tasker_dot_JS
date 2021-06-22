@@ -19,14 +19,9 @@ This is an open source program . You are welcomed to modify it... If you want to
 
 Here are some ScreenShots:
 
-
-**1st ScreenShot:**
-
-![ScreenShot 1](https://raw.githubusercontent.com/nirmalpaul383/Project_Tasker_dot_JS/master/ScreenShot/Screenshot_2020-07-16-13-09-25.png)
-
-**2nd ScreenShot:**
-
-![ScreenShot 1](https://raw.githubusercontent.com/nirmalpaul383/Project_Tasker_dot_JS/master/ScreenShot/Screenshot_2020-07-16-13-10-37.png)
+**1st ScreenShot:** | **2nd ScreenShot:**
+------------ | -------------
+![ScreenShot 1](https://raw.githubusercontent.com/nirmalpaul383/Project_Tasker_dot_JS/master/ScreenShot/Screenshot_2020-07-16-13-09-25.png) | ![ScreenShot 1](https://raw.githubusercontent.com/nirmalpaul383/Project_Tasker_dot_JS/master/ScreenShot/Screenshot_2020-07-16-13-10-37.png)
 
 **How to use 'Tasker.JS'? Here is [a quick video about it:](https://youtu.be/J8Lz8cF5Oe0)**
 
