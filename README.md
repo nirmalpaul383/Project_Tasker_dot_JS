@@ -17,6 +17,21 @@ This is an open source program . You are welcomed to modify it... If you want to
 
 ..............................................................................................................................................................................
 
+Here are some ScreenShots:
+
+
+**1st ScreenShot:**
+
+![ScreenShot 1](https://raw.githubusercontent.com/nirmalpaul383/Project_Tasker_dot_JS/master/ScreenShot/Screenshot_2020-07-16-13-09-25.png)
+
+**2nd ScreenShot:**
+
+![ScreenShot 1](https://raw.githubusercontent.com/nirmalpaul383/Project_Tasker_dot_JS/master/ScreenShot/Screenshot_2020-07-16-13-10-37.png)
+
+**How to use 'Tasker.JS'? Here is [a quick video about it:](https://youtu.be/J8Lz8cF5Oe0)**
+
+..............................................................................................................................................................................
+
 About app compatibility:
 
 This application's icon and contains are designed and developed by me (N Paul). This program is best suitable for stock android with HD (720x1280 p) and FullHD+ (1080x2160 p) resolution's display. This is an open-source project (originally made by me, N Paul) and anybody can view, modify and rebuilt it. To download the project source file visit my GitHub profile https://www.github.com/nirmalpaul383/ If you want to support me please give like to our Facebook page https://www.facebook.com/a.new.way.technical/
